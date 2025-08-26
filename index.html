@@ -1,0 +1,561 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetConnect - Cuidado de Mascotas en Córdoba</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" async></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="PetConnect Logo">
+                <span>PetConnect</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#cta">Sé un Cuidador</a></li>
+                <li><a href="#" class="profile-btn">Mi Perfil</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>El cuidado perfecto para tu mascota, a un clic de distancia.</h1>
+                <p>Encuentra cuidadores de confianza en Córdoba Capital para paseos, guardería, peluquería y más.</p>
+                <div class="search-box">
+                    <form>
+                        <div class="input-group">
+                            <label for="service-type">¿Qué servicio necesitas?</label>
+                            <select id="service-type" name="service-type">
+                                <option value="paseo">Paseo de Perros</option>
+                                <option value="guarderia">Guardería de Mascotas</option>
+                                <option value="peluqueria">Peluquería de Mascotas</option>
+                                <option value="clinica">Clínicas y Salud</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="location">Tu barrio en Córdoba Capital</label>
+                            <div class="location-input">
+                                <input type="text" id="location" name="location" placeholder="Ej: Nueva Córdoba">
+                                <span>📍</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="date">Fecha</label>
+                            <input type="date" id="date" name="date" placeholder="Selecciona una fecha">
+                        </div>
+                        <div class="input-group">
+                            <label for="time">Hora</label>
+                            <input type="time" id="time" name="time" placeholder="Selecciona una hora">
+                        </div>
+                        <button type="submit" class="btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="ad-banner">
+            <div class="container">
+                <p>Publicidad - ¡Planes de salud para tu mascota con 15% de descuento!</p>
+            </div>
+        </section>
+
+        <section class="ad-banner-secondary">
+            <div class="container">
+                <p>Publicidad - Accesorios para tu mascota con 20% OFF</p>
+            </div>
+        </section>
+
+        <section id="services" class="services-section container">
+            <h2>Nuestros Servicios</h2>
+            <p class="section-subtitle">Todo lo que tu mejor amigo necesita.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Paseo de Perros</h3>
+                    <p>Paseadores con experiencia para mantener a tu perro activo y feliz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Guardería de Mascotas</h3>
+                    <p>Un lugar seguro y divertido para tu mascota mientras estás ocupado.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Peluquería de Mascotas</h3>
+                    <p>Servicios de estética para que tu mascota luzca y se sienta genial.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Clínicas y Planes de Salud</h3>
+                    <p>Encuentra clínicas veterinarias y planes de salud para tu mascota.</p>
+                </div>
+            </div>
+            <p class="disclaimer">*No ofrecemos servicios para animales de granja o exóticos.</p>
+        </section>
+
+        <section id="search-results" class="search-results-section container hidden">
+            <h2>Resultados de Búsqueda</h2>
+            <div id="results-grid" class="services-grid">
+                <!-- Search results will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works-section container">
+            <h2>¿Cómo Funciona?</h2>
+            <p class="section-subtitle">Un proceso simple, transparente y seguro.</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <img src="registro-icon.png" alt="Icono de registro">
+                    <h3>1. Registro y Verificación</h3>
+                    <p>Dueños y cuidadores crean su perfil. Verificamos la identidad para construir una comunidad de confianza.</p>
+                </div>
+                <div class="step-card">
+                    <img src="servicios-icon.png" alt="Icono de servicios">
+                    <h3>2. Oferta de Servicios</h3>
+                    <p>Los cuidadores publican sus servicios, definiendo precios, zonas y disponibilidad.</p>
+                </div>
+                <div class="step-card">
+                    <img src="busqueda-icon.png" alt="Icono de búsqueda">
+                    <h3>3. Búsqueda y Contacto</h3>
+                    <p>Los dueños buscan y filtran cuidadores. Pueden ver perfiles, leer reseñas y chatear para resolver dudas.</p>
+                </div>
+                <div class="step-card">
+                    <img src="pago-icon.png" alt="Icono de pago seguro">
+                    <h3>4. Reserva y Pago Seguro</h3>
+                    <p>La reserva se paga en la app. Retenemos el dinero hasta que el servicio se completa satisfactoriamente.</p>
+                    <div class="payment-processor">
+                        <img src="https://img.icons8.com/color/48/mercado-pago.png" alt="Mercado Pago">
+                        <small>Pagos seguros procesados por Mercado Pago.</small>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <img src="seguimiento-icon.png" alt="Icono de seguimiento">
+                    <h3>5. Durante el Servicio</h3>
+                    <p>Recibe actualizaciones con fotos y notas. Los paseos pueden incluir seguimiento por GPS para tu tranquilidad.</p>
+                </div>
+                <div class="step-card">
+                    <img src="resena-icon.png" alt="Icono de reseña">
+                    <h3>6. Finalización y Reseñas</h3>
+                    <p>El pago se libera al cuidador y ambas partes dejan una reseña, ayudando a crecer la reputación.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="trust" class="trust-section">
+            <div class="container">
+                <h2>Confianza y Seguridad en PetConnect</h2>
+                <p class="section-subtitle">Construimos una comunidad segura para todos, verificando cada perfil.</p>
+                <div class="trust-features">
+                    <div class="trust-card">
+                        <img src="verificacion-icon.png" alt="Icono de Verificación">
+                        <h3>Verificación para Cuidadores</h3>
+                        <p>Para garantizar la seguridad, todos los cuidadores deben verificar su identidad subiendo una foto de su DNI y una selfie.</p>
+                    </div>
+                    <div class="trust-card">
+                        <img src="carnet-icon.png" alt="Icono de Carnet de Mascota">
+                        <h3>Perfil Completo para Dueños</h3>
+                        <p>Los dueños también se verifican y crean un "carnet" digital para su amigo peludo, asegurando que los cuidadores tengan toda la info necesaria.</p>
+                    </div>
+                </div>
+                <div class="priority-section">
+                    <h3>Tu Tranquilidad es Nuestra Prioridad</h3>
+                    <ul class="priority-list">
+                        <li>✓ Perfiles verificados y documentación de mascotas centralizada.</li>
+                        <li>✓ Coberturas y garantías en caso de incidentes (según plan).</li>
+                        <li>✓ Reglas claras sobre agresividad, vacunas y manejo de llaves.</li>
+                        <li>✓ Chats internos para una comunicación segura y registrada.</li>
+                        <li>✓ Sistema de reseñas y calificaciones para fomentar la calidad.</li>
+                        <li>✓ Soporte y equipo de resolución de disputas a tu disposición.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="business-model" class="business-model-section container">
+            <h2>Nuestro Modelo de Negocio Transparente</h2>
+            <p class="section-subtitle">Creemos en la claridad. Así es como PetConnect funciona y se sostiene.</p>
+            <div class="model-details">
+                <div class="model-card">
+                    <h3>¿De dónde sale el dinero?</h3>
+                    <ul>
+                        <li>Comisión por reserva: Un porcentaje del pago al cuidador.</li>
+                        <li>Tarifa de servicio al dueño: Un pequeño cargo sobre el total.</li>
+                        <li>Suscripciones Pro (Opcional): Perfiles destacados y menores comisiones.</li>
+                        <li>Penalizaciones: Cargos por cancelaciones fuera de término.</li>
+                    </ul>
+                </div>
+                <div class="model-card">
+                    <h3>Costos Clave de la App</h3>
+                    <ul>
+                        <li>Marketing y adquisición de usuarios.</li>
+                        <li>Soporte al cliente y gestión de seguros.</li>
+                        <li>Procesamiento de pagos y prevención de fraude.</li>
+                        <li>Verificación de identidad y perfiles.</li>
+                        <li>Desarrollo y mantenimiento de la plataforma.</li>
+                    </ul>
+                </div>
+                <div class="model-card example">
+                    <h3>Ejemplo Numérico (Ilustrativo)</h3>
+                    <p>Precio del servicio: <strong>$100</strong></p>
+                    <p>El dueño paga: $100 + $5 (tarifa 5%) = <strong>$105</strong></p>
+                    <p>La app retiene: $20 (comisión 20%) + $5 (tarifa) = <strong>$25</strong></p>
+                    <p>El cuidador recibe: $100 - $20 (comisión) = <strong>$80</strong></p>
+                    <small>De sus $25, la app cubre costos (~$3.45) y otros gastos, invirtiendo el resto en mejorar la plataforma.</small>
+                </div>
+            </div>
+        </section>
+        
+        <section id="cta" class="cta-section">
+            <div class="container cta-content">
+                <div class="cta-text">
+                    <h2>Conviértete en un Cuidador en PetConnect</h2>
+                    <p>¿Amas a los animales? Gana dinero haciendo lo que te apasiona. Ofrece tus servicios a miles de dueños de mascotas en Córdoba. ¡Es fácil, flexible y gratificante!</p>
+                    <p>Todos nuestros cuidadores pasan por un proceso de verificación para la seguridad de todos.</p>
+                    <a href="#" id="cta-btn" class="btn-primary">Quiero ser cuidador</a>
+                </div>
+                <div class="cta-image">
+                    <img src="sitter-image.png" alt="Persona cuidando un cachorro">
+                </div>
+            </div>
+        </section>
+
+        <section class="ad-banner">
+            <div class="container">
+                <p>Publicidad - ¡El mejor alimento balanceado, a tu casa!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 PetConnect. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="#" class="legal-link">Términos y Condiciones</a></li>
+                <li><a href="#" class="legal-link">Política de Privacidad</a></li>
+                <li><a href="#" class="admin-link">Admin</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Owner Profile Modal -->
+    <div id="owner-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Crea tu Perfil y el de tu Mascota</h2>
+            <form id="owner-form">
+                <fieldset>
+                    <legend>Paso 1: Verificación de Identidad</legend>
+                    <div class="form-group">
+                        <label for="owner-dni">Foto de tu DNI (frente)</label>
+                        <div class="file-input-wrapper">
+                           <label for="owner-dni" class="file-label">Seleccionar archivo</label>
+                           <input type="file" id="owner-dni" name="owner-dni" accept="image/*" required>
+                           <span class="file-name">Ningún archivo seleccionado</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="owner-selfie">Una selfie con tu mascota</label>
+                        <div class="file-input-wrapper">
+                            <label for="owner-selfie" class="file-label">Seleccionar archivo</label>
+                            <input type="file" id="owner-selfie" name="owner-selfie" accept="image/*" required>
+                            <span class="file-name">Ningún archivo seleccionado</span>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Paso 2: Carnet de tu Mascota</legend>
+                    <div id="pets-container">
+                        <div class="pet-form-fields">
+                             <div class="form-group">
+                                <label for="pet-photo-1">Foto de tu mascota</label>
+                                <div class="file-input-wrapper">
+                                     <label for="pet-photo-1" class="file-label">Seleccionar archivo</label>
+                                     <input type="file" id="pet-photo-1" name="pet-photo[]" accept="image/*" required>
+                                     <span class="file-name">Ningún archivo seleccionado</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="pet-name-1">Nombre de la mascota</label>
+                                <input type="text" id="pet-name-1" name="pet-name[]" placeholder="Ej: Rocky" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pet-breed-1">Raza</label>
+                                <input type="text" id="pet-breed-1" name="pet-breed[]" placeholder="Ej: Mestizo" required>
+                            </div>
+                            <div class="form-group-inline">
+                                <div class="form-group">
+                                    <label for="pet-gender-1">Sexo</label>
+                                    <select id="pet-gender-1" name="pet-gender[]" required>
+                                        <option value="" disabled selected>Selecciona el sexo</option>
+                                        <option value="macho">Macho</option>
+                                        <option value="hembra">Hembra</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pet-age-1">Edad (años)</label>
+                                    <input type="number" id="pet-age-1" name="pet-age[]" placeholder="Ej: 3" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="add-pet-btn" class="btn-secondary">Agregar otra mascota</button>
+                </fieldset>
+
+                <div class="form-group-terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">He leído, comprendido y acepto en su totalidad los <a href="#terms">Términos y Condiciones de Uso</a> y la <a href="#privacy">Política de Privacidad y Protección de Datos Personales</a>.</label>
+                </div>
+
+                <button type="submit" class="btn-primary">Crear Perfil</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sitter Verification Modal -->
+    <div id="sitter-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Verificación para Cuidadores</h2>
+            <p>Sube los siguientes documentos para verificar tu identidad y cuéntanos qué servicios ofreces.</p>
+            <form id="sitter-form">
+                <fieldset>
+                    <legend>Información Básica</legend>
+                    <div class="form-group">
+                        <label for="sitter-dni">Foto de tu DNI (frente)</label>
+                        <div class="file-input-wrapper">
+                           <label for="sitter-dni" class="file-label">Seleccionar archivo</label>
+                           <input type="file" id="sitter-dni" name="sitter-dni" accept="image/*" required>
+                           <span class="file-name">Ningún archivo seleccionado</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sitter-selfie">Una selfie tuya</label>
+                         <div class="file-input-wrapper">
+                            <label for="sitter-selfie" class="file-label">Seleccionar archivo</label>
+                            <input type="file" id="sitter-selfie" name="sitter-selfie" accept="image/*" required>
+                            <span class="file-name">Ningún archivo seleccionado</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service-area">Zona de servicio en Córdoba Capital</label>
+                        <input type="text" id="service-area" name="service-area" placeholder="Ej: Nueva Córdoba, Centro" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Servicios Ofrecidos</legend>
+                    <div class="form-group">
+                        <label>Marca los servicios que quieres prestar:</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="service-paseo" name="services" value="paseo">
+                            <label for="service-paseo">Paseo de Perros</label>
+                        </div>
+                         <div class="checkbox-group">
+                            <input type="checkbox" id="service-guarderia" name="services" value="guarderia">
+                            <label for="service-guarderia">Guardería de Mascotas</label>
+                        </div>
+                         <div class="checkbox-group">
+                            <input type="checkbox" id="service-peluqueria" name="services" value="peluqueria">
+                            <label for="service-peluqueria">Peluquería de Mascotas</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <div id="guarderia-fields" class="conditional-fields hidden">
+                    <fieldset>
+                        <legend>Detalles de Guardería</legend>
+                        <div class="form-group">
+                            <label for="guarderia-alojamiento">Tipo de alojamiento</label>
+                            <select id="guarderia-alojamiento" name="guarderia-alojamiento">
+                                <option value="casa-patio">Casa con patio</option>
+                                <option value="departamento">Departamento</option>
+                                <option value="quinta">Quinta o campo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>¿Tienes otras mascotas?</label>
+                            <select id="guarderia-mascotas-propias" name="guarderia-mascotas-propias">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guarderia-fotos">Fotos de tu espacio</label>
+                            <div class="file-input-wrapper">
+                               <label for="guarderia-fotos" class="file-label">Seleccionar archivos</label>
+                               <input type="file" id="guarderia-fotos" name="guarderia-fotos" accept="image/*" multiple>
+                               <span class="file-name">Ningún archivo seleccionado</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <div id="peluqueria-fields" class="conditional-fields hidden">
+                    <fieldset>
+                        <legend>Detalles de Peluquería</legend>
+                        <div class="form-group">
+                            <label for="peluqueria-nombre">Nombre del negocio</label>
+                            <input type="text" id="peluqueria-nombre" name="peluqueria-nombre" placeholder="Ej: Pelu-Canino Feliz">
+                        </div>
+                        <div class="form-group">
+                            <label for="peluqueria-servicios">Servicios ofrecidos (separados por coma)</label>
+                            <textarea id="peluqueria-servicios" name="peluqueria-servicios" rows="3" placeholder="Ej: Baño y secado, corte de raza, corte de uñas..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="peluqueria-fotos">Fotos de tu trabajo o local</label>
+                             <div class="file-input-wrapper">
+                               <label for="peluqueria-fotos" class="file-label">Seleccionar archivos</label>
+                               <input type="file" id="peluqueria-fotos" name="peluqueria-fotos" accept="image/*" multiple>
+                               <span class="file-name">Ningún archivo seleccionado</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar Verificación</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Legal Modal -->
+    <div id="legal-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="legal-text">
+                <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
+                <h4>1. OBJETO</h4>
+                <p>El presente documento establece los términos y condiciones que regulan el acceso y la utilización de la plataforma digital PetConnect, propiedad de PetConnect, en adelante "la Plataforma", destinada a conectar a dueños de mascotas con cuidadores profesionales.</p>
+                <h4>2. ACEPTACIÓN Y MODIFICACIONES</h4>
+                <p>El usuario, al utilizar la Plataforma, declara haber leído, entendido y aceptado en su totalidad los presentes Términos y Condiciones. PetConnect se reserva el derecho a modificar, actualizar o complementar estos términos en cualquier momento, notificando debidamente a los usuarios a través de los medios disponibles.</p>
+                <h4>3. REGISTRO Y VERIFICACIÓN</h4>
+                <p>El acceso y uso de la Plataforma requiere la creación de un perfil mediante el suministro de datos personales verídicos, incluyendo la identificación documental (DNI) y fotografías para verificación biométrica (selfies). Asimismo, se recopilará información detallada de las mascotas (nombre, raza, sexo, edad) para conformar un carnet digital. Queda expresamente prohibido ofrecer o solicitar servicios para animales no contemplados, tales como animales de granja o exóticos.</p>
+                <h4>4. DESCRIPCIÓN DE LOS SERVICIOS</h4>
+                <p>Los cuidadores podrán publicar, administrar y definir sus servicios, disponibles en zonas específicas, horarios y tarifas. Los dueños de mascotas podrán buscar, contratar y cancelar servicios, comunicándose mediante el canal oficial interno habilitado.</p>
+                <h4>5. CONTRATACIÓN Y PAGOS</h4>
+                <p>La contratación se formaliza mediante el pago anticipado a través de la pasarela de pagos segura proporcionada por Mercado Pago. La Plataforma retiene los fondos hasta la confirmación de la prestación del servicio, momento en que se libera el pago al cuidador, deducidas las comisiones correspondientes. Las tarifas, comisiones y penalizaciones se aplicarán conforme al modelo económico descrito y las políticas específicas.</p>
+                <h4>6. OBLIGACIONES DEL USUARIO</h4>
+                <p>Los usuarios se comprometen a:</p>
+                <ul>
+                    <li>Facilitar información veraz y actualizada.</li>
+                    <li>Cumplir con las normativas aplicables a la tenencia y cuidado de mascotas, incluyendo estado sanitario y vacunas vigentes.</li>
+                    <li>Utilizar la Plataforma exclusivamente para los fines previstos, absteniéndose de conductas ilícitas o perjudiciales.</li>
+                    <li>Mantener una comunicación respetuosa y utilizar únicamente los canales habilitados.</li>
+                </ul>
+                <h4>7. EXONERACIÓN DE RESPONSABILIDAD</h4>
+                <p>PetConnect actúa solamente como intermediario tecnológico y no asume responsabilidad directa por daños, perjuicios o incumplimientos derivados de la relación contractual entre dueños y cuidadores. Los cuidadores deben poseer las habilitaciones o seguros pertinentes para el correcto desarrollo de su actividad.</p>
+                <h4>8. CANCELACIONES Y PENALIZACIONES</h4>
+                <p>Las cancelaciones deberán efectuarse conforme a los plazos estipulados para evitar cargos adicionales. La Plataforma se reserva el derecho de aplicar penalizaciones o suspensiones en caso de incumplimiento reiterado o conductas contrarias a las políticas.</p>
+                <h4>9. LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h4>
+                <p>La interpretación y cumplimiento de estos términos se regirán por la legislación vigente en la República Argentina. Las partes se someten a la jurisdicción de los tribunales ubicados en la Ciudad de Córdoba.</p>
+
+                <hr>
+
+                <h2>POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS PERSONALES</h2>
+                <h4>1. INTRODUCCIÓN</h4>
+                <p>En cumplimiento con la normativa vigente sobre protección de datos personales, PetConnect garantiza la confidencialidad, integridad y seguridad de la información proporcionada por los usuarios, conforme a las disposiciones de la Ley N° 25.326 (Ley de Protección de Datos Personales) y demás normativas aplicables.</p>
+                <h4>2. RESPONSABLE DEL TRATAMIENTO</h4>
+                <p>El responsable del tratamiento de datos personales es PetConnect, con domicilio en Córdoba, Argentina, correo electrónico de contacto legal@petconnect.com.</p>
+                <h4>3. DATOS RECABADOS</h4>
+                <p>La Plataforma recopila datos personales y sensibles, incluyendo:</p>
+                <ul>
+                    <li>Información de identificación: nombre completo, DNI, fotografías para verificación facial (selfies).</li>
+                    <li>Datos de contacto: correo electrónico, teléfono.</li>
+                    <li>Información de mascotas: nombre, raza, sexo, edad, historial sanitario (carnet digital).</li>
+                    <li>Datos de uso: historial de servicios, interacciones, comunicaciones y ubicación (para el seguimiento de paseos).</li>
+                    <li>Información financiera: datos de pago gestionados por Mercado Pago como proveedor externo.</li>
+                </ul>
+                <h4>4. FINALIDAD DEL TRATAMIENTO</h4>
+                <p>Los datos recabados son utilizados exclusivamente para:</p>
+                <ul>
+                    <li>Verificar la identidad y confiabilidad de los usuarios.</li>
+                    <li>Facilitar la contratación, gestión y prestación de servicios.</li>
+                    <li>Gestionar pagos, comisiones, seguros y atención al cliente.</li>
+                    <li>Enviar comunicaciones relacionadas, notificaciones de seguridad y promociones autorizadas.</li>
+                    <li>Mejorar la experiencia y seguridad, incluyendo monitoreo GPS cuando corresponda.</li>
+                </ul>
+                <h4>5. DERECHOS DEL TITULAR</h4>
+                <p>Los titulares de los datos tienen derecho a:</p>
+                <ul>
+                    <li>Acceder a sus datos personales.</li>
+                    <li>Rectificar información inexacta o incompleta.</li>
+                    <li>Cancelar y solicitar la eliminación de sus datos, sujeto a las obligaciones legales de conservación.</li>
+                    <li>Oponerse al tratamiento por motivos legítimos.</li>
+                    <li>Revocar el consentimiento otorgado en cualquier momento.</li>
+                </ul>
+                <p>Las solicitudes se pueden realizar a través del correo de contacto indicado.</p>
+                <h4>6. MEDIDAS DE SEGURIDAD</h4>
+                <p>Se implementan medidas técnicas, administrativas y físicas para proteger la información contra accesos no autorizados, pérdida, alteraciones o divulgación indebida.</p>
+                <h4>7. CONSERVACIÓN DE DATOS</h4>
+                <p>Los datos personales se conservarán mientras se mantenga la relación con la Plataforma o sea necesario para cumplir con obligaciones legales y resolver disputas.</p>
+                <h4>8. CESIÓN DE DATOS</h4>
+                <p>PetConnect no comercializa ni cede datos personales a terceros, salvo a prestadores externos estrictamente necesarios para la prestación del servicio, en cumplimiento con la confidencialidad y seguridad requeridas.</p>
+                <h4>9. MODIFICACIONES DE LA POLÍTICA</h4>
+                <p>Cualquier actualización o cambio en esta política será informado oportunamente a los usuarios a través de los mecanismos habituales dentro de la aplicación.</p>
+
+                <hr>
+
+                <h2>AVISO LEGAL SOBRE PASARELA DE PAGO (MERCADO PAGO)</h2>
+                <h4>1. PLATAFORMA DE PAGO SEGURO</h4>
+                <p>Para garantizar la seguridad, eficiencia y transparencia en las transacciones económicas realizadas en PetConnect, los pagos se procesan exclusivamente a través de la pasarela de pagos Mercado Pago, operador autorizado y regulado según las normativas vigentes.</p>
+                <h4>2. RESPONSABILIDAD EN EL PROCESAMIENTO</h4>
+                <p>PetConnect no almacena ni procesa directamente la información sensible de medios de pago (tarjetas de crédito, débito u otros métodos). Toda la gestión financiera se realiza en conformidad con los estándares internacionales de seguridad PCI DSS implementados por Mercado Pago.</p>
+                <h4>3. AUTORIZACIÓN Y COMISIONES</h4>
+                <p>Al realizar una reserva, el usuario autoriza el cobro del importe total del servicio más las tarifas y comisiones previstas. Los porcentajes aplicados, así como cualquier penalización por cancelación, se encuentran detallados en los Términos y Condiciones y en la confirmación de la reserva.</p>
+                <h4>4. RECLAMACIONES Y SOPORTE</h4>
+                <p>Cualquier cuestión relativa a cobros, devoluciones o incidencias en el proceso de pago deberá ser comunicada inicialmente al soporte de Mercado Pago, quien dispone de canales específicos para la resolución de controversias. PetConnect ofrecerá soporte adicional en caso necesario para facilitar la comunicación.</p>
+                <h4>5. PROTECCIÓN Y PRIVACIDAD</h4>
+                <p>La información financiera proporcionada se utiliza exclusivamente para la prestación del servicio contratado y no será divulgada ni utilizada para fines distintos a los estipulados, conforme a la Política de Privacidad y los acuerdos establecidos con el proveedor de pagos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div id="admin-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Acceso de Administrador</h2>
+            <form id="admin-form">
+                <div class="form-group">
+                    <label for="admin-password">Clave Única</label>
+                    <input type="password" id="admin-password" name="admin-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Confirmar Reserva</h2>
+            <div id="booking-details">
+                <!-- Booking details injected by JS -->
+            </div>
+            <div class="booking-summary">
+                <p><strong>Subtotal:</strong> <span id="booking-subtotal">$0</span></p>
+                <p><strong>Tarifa de servicio:</strong> <span id="booking-fee">$0</span></p>
+                <hr>
+                <h3><strong>Total a pagar:</strong> <span id="booking-total">$0</span></h3>
+            </div>
+            <button id="pay-btn" class="btn-primary">
+                <img src="https://img.icons8.com/color/48/mercado-pago.png" alt="Mercado Pago" style="height: 24px; vertical-align: middle; margin-right: 8px;">
+                Pagar con Mercado Pago
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
